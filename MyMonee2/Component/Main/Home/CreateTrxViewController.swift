@@ -24,9 +24,14 @@ class CreateTrxViewController: UIViewController {
     }
     
     @IBAction func saveBtn(_ sender: Any) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ind")
+        formatter.dateFormat = "dd MMMM yyyy - HH:mm"
+        let result = formatter.string(from: date)
+        
         let trxVC = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
-        let newTrx = Transaksi(id: transaksi.count+1, trxName: trxTitle.text!, trxPrice: trxAmount.text!, status: newStatus)
-
+        let newTrx = Transaksi(id: transaksi.count+1, trxName: trxTitle.text!, trxPrice: trxAmount.text!, status: newStatus, trxDate: result)
         
         if newStatus == false {
             userData[0].userIncome += Double(trxAmount.text!)!
@@ -36,12 +41,12 @@ class CreateTrxViewController: UIViewController {
             userData[0].userBalance -= Double(trxAmount.text!)!
         }
 
-        trxVC.passBalance = userData[0].userBalance
-        trxVC.passIncome = userData[0].userIncome
-        trxVC.passExpense = userData[0].userExpense
+//        trxVC.passBalance = userData[0].userBalance
+//        trxVC.passIncome = userData[0].userIncome
+//        trxVC.passExpense = userData[0].userExpense
         
-        transaksi.append(newTrx)
-//        self.navigationController?.pushViewController(trxVC, animated: true)
+//        transaksi.append(newTrx)
+        transaksi.insert(newTrx, at: 0)
         self.navigationController?.popViewController(animated: true)
         print(transaksi)
         print(userData)

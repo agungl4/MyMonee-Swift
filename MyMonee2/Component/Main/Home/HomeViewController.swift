@@ -51,18 +51,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         greetingsLabel.text = greeting
     }
     
-    func getTime(){
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.timeZone = .current
-        formatter.locale = .current
-        formatter.dateFormat = "HH"
-        let time = formatter.string(from: date)
-    }
+//    func getTime(){
+//        let date = Date()
+//        let formatter = DateFormatter()
+//        formatter.timeZone = .current
+//        formatter.locale = .current
+//        formatter.dateFormat = "HH"
+//        let time = formatter.string(from: date)
+//    }
     
-    var passBalance: Double = 0.0
-    var passIncome: Double = 0.0
-    var passExpense: Double = 0.0
+
+    
+//    var passBalance: Double = 0.0
+//    var passIncome: Double = 0.0
+//    var passExpense: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,13 +72,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
-        totalBalance.text = "\(passBalance)"
-        totalIncome.text = "\(passIncome)"
-        totalExpense.text = "\(passExpense)"
+
         let uiNib = UINib(nibName: String(describing: HomeTableViewCell.self), bundle: nil)
         tableView.register(uiNib, forCellReuseIdentifier: String(describing: HomeTableViewCell.self))
         greetingLogic()
-//        getTime()
         
     }
 
@@ -85,12 +84,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeTableViewCell.self), for: indexPath) as! HomeTableViewCell
 //        let newCell = [Transaksi] = transaksi.sorted(by: { $0.id! > $1.id! })
         cell.titleLabel.text = transaksi[indexPath.row].trxName
         cell.priceLabel.text = "Rp \(transaksi[indexPath.row].trxPrice ?? "0")"
-//        cell.dateLabel.text
+        cell.dateLabel.text = transaksi[indexPath.row].trxDate
         if transaksi[indexPath.row].status {
             cell.imageStatus.image = UIImage(systemName: "arrow.down")
             cell.imageStatus.tintColor = UIColor.red
@@ -115,6 +113,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        totalBalance.text = "\(userData[0].userBalance)"
+        totalIncome.text = "\(userData[0].userIncome)"
+        totalExpense.text = "\(userData[0].userExpense)"
     }
 
 }
