@@ -17,6 +17,7 @@ class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBOutlet weak var impianTableView: UITableView!
+    @IBOutlet weak var emptyDataLabel: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,16 @@ class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if impian.count == 0 {
+            impianTableView.isHidden = true
+            emptyDataLabel.isHidden = false
+        } else {
+            impianTableView.isHidden = false
+            emptyDataLabel.isHidden = true
+        }
         return impian.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let priceFormatter = NumberFormatter()
         priceFormatter.numberStyle = .currency
@@ -38,9 +47,12 @@ class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ImpianTableViewCell.self), for: indexPath) as! ImpianTableViewCell
         let wish = impian[indexPath.row]
+        cell.impianProgressBar.progress = Float(impian[indexPath.row].impianCurrent!)!/Float(impian[indexPath.row].impianGoal!)!
+        cell.impianProgressBar.setProgress(cell.impianProgressBar.progress, animated: true)
+        
         cell.impianTitle.text = impian[indexPath.row].impianName
-        cell.impianCurrent.text = impian[indexPath.row].impianCurrent
-        cell.impianGoal.text = impian[indexPath.row].impianGoal
+        cell.impianCurrent.text = "IDR \(impian[indexPath.row].impianCurrent ?? "0")"
+        cell.impianGoal.text = "IDR \(impian[indexPath.row].impianGoal ?? "0")"
 //        cell.impianProgressBar.progress = impian[indexPath.row].impianCurrent / impian[indexPath.row].impianGoal
         return cell
     }

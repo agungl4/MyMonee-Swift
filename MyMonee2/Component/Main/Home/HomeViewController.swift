@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var greetingsLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var emptyDataLabel: UIImageView!
     @IBOutlet weak var displayedName: UILabel!
     @IBOutlet weak var totalBalance: UILabel!
     @IBOutlet weak var totalIncome: UILabel!
@@ -33,11 +34,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let currentHour = calendar.component(.hour, from: date as Date)
         let hourInt = Int(currentHour.description)!
 
-        if hourInt >= 12 && hourInt <= 16 {
-            greeting = "Good Afternoon"
-        }
-        else if hourInt >= 7 && hourInt <= 12 {
+        if hourInt >= 7 && hourInt <= 12 {
             greeting = "Good Morning"
+        }
+        else if hourInt >= 12 && hourInt <= 16 {
+            greeting = "Good Afternoon"
         }
         else if hourInt >= 16 && hourInt <= 20 {
             greeting = "Good Evening"
@@ -46,7 +47,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             greeting = "Good Night"
         }
         else if hourInt >= 0 && hourInt <= 7 {
-            greeting = "You should be sleeping right now"
+            greeting = "Tidur bro"
         }
 
         greetingsLabel.text = greeting
@@ -87,7 +88,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if transaksi.count == 0 {
+            tableView.isHidden = true
+            emptyDataLabel.isHidden = false
+        } else {
+            tableView.isHidden = false
+            emptyDataLabel.isHidden = true
+        }
         return transaksi.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -120,9 +129,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        totalBalance.text = "\(userData[0].userBalance)"
-        totalIncome.text = "\(userData[0].userIncome)"
-        totalExpense.text = "\(userData[0].userExpense)"
+        totalBalance.text = "Rp \(userData[0].userBalance)"
+        totalIncome.text = "Rp \(userData[0].userIncome)"
+        totalExpense.text = "Rp \(userData[0].userExpense)"
         displayedName.text = userData[0].userName
     }
 

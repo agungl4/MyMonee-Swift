@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImpianViewController" customModule="MyMonee2" customModuleProvider="target">
             <connections>
+                <outlet property="emptyDataLabel" destination="YcA-4f-Omc" id="gJy-tL-Pxh"/>
                 <outlet property="impianTableView" destination="5M5-Rw-YbD" id="BGG-sQ-z4x"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -44,6 +45,10 @@
                         <action selector="btnCreateImpian:" destination="-1" eventType="touchUpInside" id="TQK-QT-8fL"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotFound" translatesAutoresizingMaskIntoConstraints="NO" id="YcA-4f-Omc">
+                    <rect key="frame" x="87" y="384" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,6 +56,7 @@
         </view>
     </objects>
     <resources>
+        <image name="NotFound" width="98" height="98"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

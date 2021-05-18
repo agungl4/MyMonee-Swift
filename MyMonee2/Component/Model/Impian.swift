@@ -16,6 +16,6 @@ struct Impian {
 }
 
 var impian: [Impian] = [
-    Impian(id:1, impianName: "beli switch", impianProgress: 0.5, impianCurrent: "200.000", impianGoal: "7000.000"),
-    Impian(id:2, impianName: "beli ps4", impianProgress: 0.0, impianCurrent: "500.000", impianGoal: "6000.000")
+//    Impian(id:1, impianName: "beli switch", impianProgress: 0.5, impianCurrent: "200.000", impianGoal: "7000.000"),
+//    Impian(id:2, impianName: "beli ps4", impianProgress: 0.0, impianCurrent: "500.000", impianGoal: "6000.000")
 ]

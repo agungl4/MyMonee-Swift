@@ -14,6 +14,15 @@ class EditTrxViewController: UIViewController {
     
     
     @IBAction func editBtn(_ sender: UIButton) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ind")
+        formatter.dateFormat = "dd MMMM yyyy - HH:mm"
+        let result = formatter.string(from: date)
+        
+        let trxVC = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
+        transaksi[getIndex!-1] = Transaksi(id: transaksi[getIndex!-1].id, trxName : judulTrx.text!, trxPrice: jumlahTrx.text!, trxDate: result)
+        self.navigationController?.pushViewController(trxVC, animated: true)
     }
     @IBAction func deleteBtn(_ sender: UIButton) {
         let trxVC = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
