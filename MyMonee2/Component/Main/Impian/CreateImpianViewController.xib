@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateImpianViewController" customModule="MyMonee2" customModuleProvider="target">
+            <connections>
+                <outlet property="goalTxt" destination="UR1-2V-yeR" id="NCV-NH-5LQ"/>
+                <outlet property="titleTxt" destination="Nx9-nY-aWe" id="sGX-Gs-Hzo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tambah Impian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abd-Ah-X1I">
+                    <rect key="frame" x="53" y="66" width="169" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="169" id="bge-LM-Tia"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHu-jL-Oo2">
+                    <rect key="frame" x="20" y="172" width="44" height="22.5"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loZ-rO-VHq">
+                    <rect key="frame" x="20" y="68" width="27" height="22"/>
+                    <state key="normal" image="Button_Back"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Capaian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okP-bO-9NR">
+                    <rect key="frame" x="20" y="244.5" width="134" height="24"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nx9-nY-aWe">
+                    <rect key="frame" x="20" y="202.5" width="186" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UR1-2V-yeR">
+                    <rect key="frame" x="20" y="276.5" width="186" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mm-VV-Q90">
+                    <rect key="frame" x="38" y="739" width="338" height="43"/>
+                    <state key="normal" image="Button_Save_Active"/>
+                    <connections>
+                        <action selector="btnSave:" destination="-1" eventType="touchUpInside" id="8hM-6x-YHN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6mm-VV-Q90" secondAttribute="bottom" constant="80" id="3kQ-jd-Ged"/>
+                <constraint firstItem="okP-bO-9NR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5Km-Wx-SAh"/>
+                <constraint firstItem="okP-bO-9NR" firstAttribute="top" secondItem="Nx9-nY-aWe" secondAttribute="bottom" constant="8" id="6O2-Hm-meH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6mm-VV-Q90" secondAttribute="trailing" constant="38" id="Aad-Q4-wwA"/>
+                <constraint firstItem="6mm-VV-Q90" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="38" id="Aqa-Do-zlN"/>
+                <constraint firstItem="loZ-rO-VHq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="BTl-oj-NQe"/>
+                <constraint firstItem="loZ-rO-VHq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="D4w-NZ-cND"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UR1-2V-yeR" secondAttribute="trailing" constant="208" id="EHb-FY-xRL"/>
+                <constraint firstItem="JHu-jL-Oo2" firstAttribute="top" secondItem="loZ-rO-VHq" secondAttribute="bottom" constant="82" id="EfC-GU-jU4"/>
+                <constraint firstItem="JHu-jL-Oo2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Nm2-wn-bj8"/>
+                <constraint firstItem="Nx9-nY-aWe" firstAttribute="top" secondItem="JHu-jL-Oo2" secondAttribute="bottom" constant="8" id="Nmw-p9-mcG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="abd-Ah-X1I" secondAttribute="trailing" constant="192" id="PlI-wK-vHn"/>
+                <constraint firstItem="Nx9-nY-aWe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ZYG-RJ-YgJ"/>
+                <constraint firstItem="Nx9-nY-aWe" firstAttribute="top" secondItem="JHu-jL-Oo2" secondAttribute="bottom" constant="8" symbolic="YES" id="bVa-JP-baU"/>
+                <constraint firstItem="okP-bO-9NR" firstAttribute="top" secondItem="Nx9-nY-aWe" secondAttribute="bottom" constant="8" symbolic="YES" id="cAY-3f-ENN"/>
+                <constraint firstItem="abd-Ah-X1I" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="22" id="efg-K9-QnS"/>
+                <constraint firstItem="UR1-2V-yeR" firstAttribute="top" secondItem="okP-bO-9NR" secondAttribute="bottom" constant="8" id="grh-ig-ewe"/>
+                <constraint firstItem="JHu-jL-Oo2" firstAttribute="top" secondItem="loZ-rO-VHq" secondAttribute="bottom" constant="82" id="ito-YP-pbM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JHu-jL-Oo2" secondAttribute="trailing" constant="350" id="jb0-7H-j4g"/>
+                <constraint firstItem="abd-Ah-X1I" firstAttribute="leading" secondItem="loZ-rO-VHq" secondAttribute="trailing" constant="6" id="m4s-j4-c92"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nx9-nY-aWe" secondAttribute="trailing" constant="208" id="qCI-ne-TB7"/>
+                <constraint firstItem="UR1-2V-yeR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="xhA-Pz-Z5G"/>
+            </constraints>
+            <point key="canvasLocation" x="-100.00000000000001" y="69.642857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Button_Back" width="12" height="20"/>
+        <image name="Button_Save_Active" width="338" height="43"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

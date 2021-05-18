@@ -7,25 +7,117 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA75122E2653411900F5EA40 /* EditTrxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75122C2653411900F5EA40 /* EditTrxViewController.swift */; };
+		FA75122F2653411900F5EA40 /* EditTrxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA75122D2653411900F5EA40 /* EditTrxViewController.xib */; };
+		FA82A80E26527905001E7194 /* Userdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82A80D26527905001E7194 /* Userdata.swift */; };
+		FAAB186F26502BB700B100D9 /* CreateTrxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB186D26502BB700B100D9 /* CreateTrxViewController.swift */; };
+		FAAB187026502BB700B100D9 /* CreateTrxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAB186E26502BB700B100D9 /* CreateTrxViewController.xib */; };
+		FAAB187426503B0500B100D9 /* CreateImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB187226503B0500B100D9 /* CreateImpianViewController.swift */; };
+		FAAB187526503B0500B100D9 /* CreateImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAB187326503B0500B100D9 /* CreateImpianViewController.xib */; };
+		FAC75E0D2651C4020086CBBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC75E0C2651C4020086CBBB /* Assets.xcassets */; };
 		FAD078BB264D730E00877F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD078BA264D730E00877F90 /* AppDelegate.swift */; };
 		FAD078BD264D730E00877F90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD078BC264D730E00877F90 /* SceneDelegate.swift */; };
 		FAD078BF264D730E00877F90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD078BE264D730E00877F90 /* ViewController.swift */; };
 		FAD078C2264D730E00877F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD078C0264D730E00877F90 /* Main.storyboard */; };
 		FAD078C5264D730E00877F90 /* MyMonee2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAD078C3264D730E00877F90 /* MyMonee2.xcdatamodeld */; };
-		FAD078C7264D730F00877F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD078C6264D730F00877F90 /* Assets.xcassets */; };
 		FAD078CA264D730F00877F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD078C8264D730F00877F90 /* LaunchScreen.storyboard */; };
+		FAD078E2264D765400877F90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD078E0264D765400877F90 /* HomeViewController.swift */; };
+		FAD078E3264D765400877F90 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD078E1264D765400877F90 /* HomeViewController.xib */; };
+		FAD078EE264D7C5A00877F90 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD078EC264D7C5A00877F90 /* HomeTableViewCell.swift */; };
+		FAD078EF264D7C5A00877F90 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD078ED264D7C5A00877F90 /* HomeTableViewCell.xib */; };
+		FAD078F9264D8D5A00877F90 /* Transaksi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD078F8264D8D5A00877F90 /* Transaksi.swift */; };
+		FAE2AA97264ED4B9005BE73F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2AA95264ED4B9005BE73F /* MainTabController.swift */; };
+		FAE2AA98264ED4B9005BE73F /* MainTabController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE2AA96264ED4B9005BE73F /* MainTabController.xib */; };
+		FAE2AAA7264EF610005BE73F /* ImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2AAA5264EF610005BE73F /* ImpianViewController.swift */; };
+		FAE2AAA8264EF610005BE73F /* ImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE2AAA6264EF610005BE73F /* ImpianViewController.xib */; };
+		FAE2AAAC264EF8C2005BE73F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2AAAA264EF8C2005BE73F /* ProfileViewController.swift */; };
+		FAE2AAAD264EF8C2005BE73F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE2AAAB264EF8C2005BE73F /* ProfileViewController.xib */; };
+		FAF611082651337200D6877B /* ImpianTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF611062651337200D6877B /* ImpianTableViewCell.swift */; };
+		FAF611092651337200D6877B /* ImpianTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF611072651337200D6877B /* ImpianTableViewCell.xib */; };
+		FAF6110C265137CB00D6877B /* Impian.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6110B265137CB00D6877B /* Impian.swift */; };
+		FAF611112651676800D6877B /* DetailImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6110F2651676800D6877B /* DetailImpianViewController.swift */; };
+		FAF611122651676800D6877B /* DetailImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF611102651676800D6877B /* DetailImpianViewController.xib */; };
+		FAF6112926516AD900D6877B /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111626516AD800D6877B /* Poppins-Thin.ttf */; };
+		FAF6112A26516AD900D6877B /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111726516AD800D6877B /* Poppins-Italic.ttf */; };
+		FAF6112B26516AD900D6877B /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111826516AD800D6877B /* Poppins-BoldItalic.ttf */; };
+		FAF6112C26516AD900D6877B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111926516AD800D6877B /* Poppins-Regular.ttf */; };
+		FAF6112D26516AD900D6877B /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111A26516AD800D6877B /* Poppins-Light.ttf */; };
+		FAF6112E26516AD900D6877B /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111B26516AD800D6877B /* Poppins-ThinItalic.ttf */; };
+		FAF6112F26516AD900D6877B /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111C26516AD800D6877B /* Poppins-ExtraLight.ttf */; };
+		FAF6113026516AD900D6877B /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111D26516AD800D6877B /* Poppins-LightItalic.ttf */; };
+		FAF6113126516AD900D6877B /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111E26516AD900D6877B /* Poppins-MediumItalic.ttf */; };
+		FAF6113226516AD900D6877B /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6111F26516AD900D6877B /* Poppins-ExtraLightItalic.ttf */; };
+		FAF6113326516AD900D6877B /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6112026516AD900D6877B /* Poppins-SemiBoldItalic.ttf */; };
+		FAF6113426516AD900D6877B /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6112126516AD900D6877B /* Poppins-Bold.ttf */; };
+		FAF6113526516AD900D6877B /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6112226516AD900D6877B /* Poppins-BlackItalic.ttf */; };
+		FAF6113626516AD900D6877B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = FAF6112326516AD900D6877B /* OFL.txt */; };
+		FAF6113726516AD900D6877B /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6112426516AD900D6877B /* Poppins-Medium.ttf */; };
+		FAF6113826516AD900D6877B /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6112526516AD900D6877B /* Poppins-SemiBold.ttf */; };
+		FAF6113926516AD900D6877B /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6112626516AD900D6877B /* Poppins-ExtraBold.ttf */; };
+		FAF6113A26516AD900D6877B /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6112726516AD900D6877B /* Poppins-ExtraBoldItalic.ttf */; };
+		FAF6113B26516AD900D6877B /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAF6112826516AD900D6877B /* Poppins-Black.ttf */; };
+		FAF611412651BD0600D6877B /* DetailTrxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6113F2651BD0600D6877B /* DetailTrxViewController.swift */; };
+		FAF611422651BD0600D6877B /* DetailTrxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF611402651BD0600D6877B /* DetailTrxViewController.xib */; };
+		FAF611462651C07100D6877B /* EditImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF611442651C07100D6877B /* EditImpianViewController.swift */; };
+		FAF611472651C07100D6877B /* EditImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF611452651C07100D6877B /* EditImpianViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA75122C2653411900F5EA40 /* EditTrxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrxViewController.swift; sourceTree = "<group>"; };
+		FA75122D2653411900F5EA40 /* EditTrxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTrxViewController.xib; sourceTree = "<group>"; };
+		FA82A80D26527905001E7194 /* Userdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userdata.swift; sourceTree = "<group>"; };
+		FAAB186D26502BB700B100D9 /* CreateTrxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrxViewController.swift; sourceTree = "<group>"; };
+		FAAB186E26502BB700B100D9 /* CreateTrxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTrxViewController.xib; sourceTree = "<group>"; };
+		FAAB187226503B0500B100D9 /* CreateImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImpianViewController.swift; sourceTree = "<group>"; };
+		FAAB187326503B0500B100D9 /* CreateImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateImpianViewController.xib; sourceTree = "<group>"; };
+		FAC75E0C2651C4020086CBBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Component/Main/Assets.xcassets; sourceTree = "<group>"; };
 		FAD078B7264D730E00877F90 /* MyMonee2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMonee2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD078BA264D730E00877F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD078BC264D730E00877F90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAD078BE264D730E00877F90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAD078C1264D730E00877F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAD078C4264D730E00877F90 /* MyMonee2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyMonee2.xcdatamodel; sourceTree = "<group>"; };
-		FAD078C6264D730F00877F90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD078C9264D730F00877F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAD078CB264D730F00877F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD078E0264D765400877F90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FAD078E1264D765400877F90 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FAD078EC264D7C5A00877F90 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		FAD078ED264D7C5A00877F90 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		FAD078F8264D8D5A00877F90 /* Transaksi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaksi.swift; sourceTree = "<group>"; };
+		FAE2AA95264ED4B9005BE73F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		FAE2AA96264ED4B9005BE73F /* MainTabController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabController.xib; sourceTree = "<group>"; };
+		FAE2AAA5264EF610005BE73F /* ImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianViewController.swift; sourceTree = "<group>"; };
+		FAE2AAA6264EF610005BE73F /* ImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianViewController.xib; sourceTree = "<group>"; };
+		FAE2AAAA264EF8C2005BE73F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FAE2AAAB264EF8C2005BE73F /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		FAF611062651337200D6877B /* ImpianTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianTableViewCell.swift; sourceTree = "<group>"; };
+		FAF611072651337200D6877B /* ImpianTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianTableViewCell.xib; sourceTree = "<group>"; };
+		FAF6110B265137CB00D6877B /* Impian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Impian.swift; sourceTree = "<group>"; };
+		FAF6110F2651676800D6877B /* DetailImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImpianViewController.swift; sourceTree = "<group>"; };
+		FAF611102651676800D6877B /* DetailImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailImpianViewController.xib; sourceTree = "<group>"; };
+		FAF6111626516AD800D6877B /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Thin.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		FAF6111726516AD800D6877B /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Italic.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		FAF6111826516AD800D6877B /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BoldItalic.ttf"; path = "../../../../../Downloads/Poppins/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FAF6111926516AD800D6877B /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		FAF6111A26516AD800D6877B /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		FAF6111B26516AD800D6877B /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ThinItalic.ttf"; path = "../../../../../Downloads/Poppins/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FAF6111C26516AD800D6877B /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLight.ttf"; path = "../../../../../Downloads/Poppins/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FAF6111D26516AD800D6877B /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-LightItalic.ttf"; path = "../../../../../Downloads/Poppins/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		FAF6111E26516AD900D6877B /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../../../Downloads/Poppins/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FAF6111F26516AD900D6877B /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLightItalic.ttf"; path = "../../../../../Downloads/Poppins/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FAF6112026516AD900D6877B /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBoldItalic.ttf"; path = "../../../../../Downloads/Poppins/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FAF6112126516AD900D6877B /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		FAF6112226516AD900D6877B /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BlackItalic.ttf"; path = "../../../../../Downloads/Poppins/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FAF6112326516AD900D6877B /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OFL.txt; path = ../../../../../Downloads/Poppins/OFL.txt; sourceTree = "<group>"; };
+		FAF6112426516AD900D6877B /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		FAF6112526516AD900D6877B /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../Downloads/Poppins/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		FAF6112626516AD900D6877B /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBold.ttf"; path = "../../../../../Downloads/Poppins/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FAF6112726516AD900D6877B /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBoldItalic.ttf"; path = "../../../../../Downloads/Poppins/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FAF6112826516AD900D6877B /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Black.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		FAF6113F2651BD0600D6877B /* DetailTrxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrxViewController.swift; sourceTree = "<group>"; };
+		FAF611402651BD0600D6877B /* DetailTrxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTrxViewController.xib; sourceTree = "<group>"; };
+		FAF611442651C07100D6877B /* EditImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImpianViewController.swift; sourceTree = "<group>"; };
+		FAF611452651C07100D6877B /* EditImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditImpianViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +131,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAA4BCD226521F21007F5F7C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FAAB186D26502BB700B100D9 /* CreateTrxViewController.swift */,
+				FAAB186E26502BB700B100D9 /* CreateTrxViewController.xib */,
+				FAF6113F2651BD0600D6877B /* DetailTrxViewController.swift */,
+				FAF611402651BD0600D6877B /* DetailTrxViewController.xib */,
+				FAD078E0264D765400877F90 /* HomeViewController.swift */,
+				FAD078E1264D765400877F90 /* HomeViewController.xib */,
+				FA75122C2653411900F5EA40 /* EditTrxViewController.swift */,
+				FA75122D2653411900F5EA40 /* EditTrxViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FAA4BCD326521F28007F5F7C /* Impian */ = {
+			isa = PBXGroup;
+			children = (
+				FAE2AAA5264EF610005BE73F /* ImpianViewController.swift */,
+				FAE2AAA6264EF610005BE73F /* ImpianViewController.xib */,
+				FAAB187226503B0500B100D9 /* CreateImpianViewController.swift */,
+				FAAB187326503B0500B100D9 /* CreateImpianViewController.xib */,
+				FAF6110F2651676800D6877B /* DetailImpianViewController.swift */,
+				FAF611102651676800D6877B /* DetailImpianViewController.xib */,
+				FAF611442651C07100D6877B /* EditImpianViewController.swift */,
+				FAF611452651C07100D6877B /* EditImpianViewController.xib */,
+			);
+			path = Impian;
+			sourceTree = "<group>";
+		};
+		FAA4BCD426521F30007F5F7C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FAE2AAAA264EF8C2005BE73F /* ProfileViewController.swift */,
+				FAE2AAAB264EF8C2005BE73F /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		FAD078AE264D730E00877F90 = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +189,103 @@
 		FAD078B9264D730E00877F90 /* MyMonee2 */ = {
 			isa = PBXGroup;
 			children = (
+				FAC75E0C2651C4020086CBBB /* Assets.xcassets */,
+				FAF6111426516A1100D6877B /* assets */,
+				FAD078DE264D75DB00877F90 /* Component */,
 				FAD078BA264D730E00877F90 /* AppDelegate.swift */,
 				FAD078BC264D730E00877F90 /* SceneDelegate.swift */,
 				FAD078BE264D730E00877F90 /* ViewController.swift */,
 				FAD078C0264D730E00877F90 /* Main.storyboard */,
-				FAD078C6264D730F00877F90 /* Assets.xcassets */,
 				FAD078C8264D730F00877F90 /* LaunchScreen.storyboard */,
 				FAD078CB264D730F00877F90 /* Info.plist */,
 				FAD078C3264D730E00877F90 /* MyMonee2.xcdatamodeld */,
 			);
 			path = MyMonee2;
+			sourceTree = "<group>";
+		};
+		FAD078DE264D75DB00877F90 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FAE2AA94264ED477005BE73F /* TabNavigator */,
+				FAD078F3264D8D1400877F90 /* Model */,
+				FAD078F1264D8C8E00877F90 /* Main */,
+				FAD078E6264D7C1E00877F90 /* Cell */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		FAD078E6264D7C1E00877F90 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FAD078EC264D7C5A00877F90 /* HomeTableViewCell.swift */,
+				FAD078ED264D7C5A00877F90 /* HomeTableViewCell.xib */,
+				FAF611062651337200D6877B /* ImpianTableViewCell.swift */,
+				FAF611072651337200D6877B /* ImpianTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FAD078F1264D8C8E00877F90 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FAA4BCD226521F21007F5F7C /* Home */,
+				FAA4BCD326521F28007F5F7C /* Impian */,
+				FAA4BCD426521F30007F5F7C /* Profile */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FAD078F3264D8D1400877F90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAD078F8264D8D5A00877F90 /* Transaksi.swift */,
+				FAF6110B265137CB00D6877B /* Impian.swift */,
+				FA82A80D26527905001E7194 /* Userdata.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAE2AA94264ED477005BE73F /* TabNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				FAE2AA95264ED4B9005BE73F /* MainTabController.swift */,
+				FAE2AA96264ED4B9005BE73F /* MainTabController.xib */,
+			);
+			path = TabNavigator;
+			sourceTree = "<group>";
+		};
+		FAF6111426516A1100D6877B /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				FAF6111526516A1A00D6877B /* font */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		FAF6111526516A1A00D6877B /* font */ = {
+			isa = PBXGroup;
+			children = (
+				FAF6112326516AD900D6877B /* OFL.txt */,
+				FAF6112826516AD900D6877B /* Poppins-Black.ttf */,
+				FAF6112226516AD900D6877B /* Poppins-BlackItalic.ttf */,
+				FAF6112126516AD900D6877B /* Poppins-Bold.ttf */,
+				FAF6111826516AD800D6877B /* Poppins-BoldItalic.ttf */,
+				FAF6112626516AD900D6877B /* Poppins-ExtraBold.ttf */,
+				FAF6112726516AD900D6877B /* Poppins-ExtraBoldItalic.ttf */,
+				FAF6111C26516AD800D6877B /* Poppins-ExtraLight.ttf */,
+				FAF6111F26516AD900D6877B /* Poppins-ExtraLightItalic.ttf */,
+				FAF6111726516AD800D6877B /* Poppins-Italic.ttf */,
+				FAF6111A26516AD800D6877B /* Poppins-Light.ttf */,
+				FAF6111D26516AD800D6877B /* Poppins-LightItalic.ttf */,
+				FAF6112426516AD900D6877B /* Poppins-Medium.ttf */,
+				FAF6111E26516AD900D6877B /* Poppins-MediumItalic.ttf */,
+				FAF6111926516AD800D6877B /* Poppins-Regular.ttf */,
+				FAF6112526516AD900D6877B /* Poppins-SemiBold.ttf */,
+				FAF6112026516AD900D6877B /* Poppins-SemiBoldItalic.ttf */,
+				FAF6111626516AD800D6877B /* Poppins-Thin.ttf */,
+				FAF6111B26516AD800D6877B /* Poppins-ThinItalic.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +345,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAB187026502BB700B100D9 /* CreateTrxViewController.xib in Resources */,
+				FAF6113826516AD900D6877B /* Poppins-SemiBold.ttf in Resources */,
+				FAF6112D26516AD900D6877B /* Poppins-Light.ttf in Resources */,
+				FAE2AA98264ED4B9005BE73F /* MainTabController.xib in Resources */,
+				FAF6112A26516AD900D6877B /* Poppins-Italic.ttf in Resources */,
 				FAD078CA264D730F00877F90 /* LaunchScreen.storyboard in Resources */,
-				FAD078C7264D730F00877F90 /* Assets.xcassets in Resources */,
+				FAF6112926516AD900D6877B /* Poppins-Thin.ttf in Resources */,
+				FAF611472651C07100D6877B /* EditImpianViewController.xib in Resources */,
+				FAF6113B26516AD900D6877B /* Poppins-Black.ttf in Resources */,
+				FAF6113726516AD900D6877B /* Poppins-Medium.ttf in Resources */,
+				FAF6113226516AD900D6877B /* Poppins-ExtraLightItalic.ttf in Resources */,
+				FAF611122651676800D6877B /* DetailImpianViewController.xib in Resources */,
+				FAF6113626516AD900D6877B /* OFL.txt in Resources */,
+				FAC75E0D2651C4020086CBBB /* Assets.xcassets in Resources */,
+				FAE2AAAD264EF8C2005BE73F /* ProfileViewController.xib in Resources */,
+				FAF6112C26516AD900D6877B /* Poppins-Regular.ttf in Resources */,
+				FAAB187526503B0500B100D9 /* CreateImpianViewController.xib in Resources */,
+				FAF6113026516AD900D6877B /* Poppins-LightItalic.ttf in Resources */,
+				FAF6112B26516AD900D6877B /* Poppins-BoldItalic.ttf in Resources */,
 				FAD078C2264D730E00877F90 /* Main.storyboard in Resources */,
+				FAD078EF264D7C5A00877F90 /* HomeTableViewCell.xib in Resources */,
+				FAF6112F26516AD900D6877B /* Poppins-ExtraLight.ttf in Resources */,
+				FAF6113526516AD900D6877B /* Poppins-BlackItalic.ttf in Resources */,
+				FA75122F2653411900F5EA40 /* EditTrxViewController.xib in Resources */,
+				FAE2AAA8264EF610005BE73F /* ImpianViewController.xib in Resources */,
+				FAF6112E26516AD900D6877B /* Poppins-ThinItalic.ttf in Resources */,
+				FAF6113426516AD900D6877B /* Poppins-Bold.ttf in Resources */,
+				FAF6113A26516AD900D6877B /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				FAF611092651337200D6877B /* ImpianTableViewCell.xib in Resources */,
+				FAF6113326516AD900D6877B /* Poppins-SemiBoldItalic.ttf in Resources */,
+				FAF611422651BD0600D6877B /* DetailTrxViewController.xib in Resources */,
+				FAF6113926516AD900D6877B /* Poppins-ExtraBold.ttf in Resources */,
+				FAF6113126516AD900D6877B /* Poppins-MediumItalic.ttf in Resources */,
+				FAD078E3264D765400877F90 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,10 +389,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAB187426503B0500B100D9 /* CreateImpianViewController.swift in Sources */,
+				FA75122E2653411900F5EA40 /* EditTrxViewController.swift in Sources */,
+				FAD078EE264D7C5A00877F90 /* HomeTableViewCell.swift in Sources */,
+				FAAB186F26502BB700B100D9 /* CreateTrxViewController.swift in Sources */,
+				FAD078E2264D765400877F90 /* HomeViewController.swift in Sources */,
+				FAE2AAAC264EF8C2005BE73F /* ProfileViewController.swift in Sources */,
+				FAF611112651676800D6877B /* DetailImpianViewController.swift in Sources */,
+				FAF611082651337200D6877B /* ImpianTableViewCell.swift in Sources */,
+				FAE2AA97264ED4B9005BE73F /* MainTabController.swift in Sources */,
+				FAF611412651BD0600D6877B /* DetailTrxViewController.swift in Sources */,
 				FAD078BF264D730E00877F90 /* ViewController.swift in Sources */,
+				FAE2AAA7264EF610005BE73F /* ImpianViewController.swift in Sources */,
+				FAF6110C265137CB00D6877B /* Impian.swift in Sources */,
 				FAD078C5264D730E00877F90 /* MyMonee2.xcdatamodeld in Sources */,
 				FAD078BB264D730E00877F90 /* AppDelegate.swift in Sources */,
+				FA82A80E26527905001E7194 /* Userdata.swift in Sources */,
 				FAD078BD264D730E00877F90 /* SceneDelegate.swift in Sources */,
+				FAF611462651C07100D6877B /* EditImpianViewController.swift in Sources */,
+				FAD078F9264D8D5A00877F90 /* Transaksi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

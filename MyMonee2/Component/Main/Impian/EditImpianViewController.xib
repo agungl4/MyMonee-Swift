@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditImpianViewController" customModule="MyMonee2" customModuleProvider="target">
+            <connections>
+                <outlet property="judul" destination="V0k-Xl-KHf" id="UZ2-nh-PED"/>
+                <outlet property="progress" destination="tKV-xg-e2X" id="ok9-ol-gO5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubah Impian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvO-rY-Plx">
+                    <rect key="frame" x="53" y="66" width="169" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="169" id="6or-vO-pYf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUf-L0-4g0">
+                    <rect key="frame" x="20" y="172" width="44" height="22.5"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34X-N3-AIl">
+                    <rect key="frame" x="35" y="68" width="12" height="22"/>
+                    <state key="normal" image="Button_Back"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Capaian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wG2-I4-OmY">
+                    <rect key="frame" x="20" y="244.5" width="134" height="24"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrp-1F-wvT">
+                    <rect key="frame" x="38" y="686" width="338" height="43"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="Update"/>
+                    <connections>
+                        <action selector="updateBtn:" destination="-1" eventType="touchUpInside" id="xPd-HN-0v8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWc-aC-7Uh">
+                    <rect key="frame" x="38" y="748" width="338" height="43"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="Delete"/>
+                    <connections>
+                        <action selector="deleteBtn:" destination="-1" eventType="touchUpInside" id="qei-vD-dN2"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0k-Xl-KHf">
+                    <rect key="frame" x="20" y="202.5" width="186" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tKV-xg-e2X">
+                    <rect key="frame" x="20" y="276.5" width="186" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fvO-rY-Plx" firstAttribute="leading" secondItem="34X-N3-AIl" secondAttribute="trailing" constant="6" id="56y-pt-LXR"/>
+                <constraint firstItem="fvO-rY-Plx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="22" id="914-Ib-Hbs"/>
+                <constraint firstItem="wG2-I4-OmY" firstAttribute="top" secondItem="V0k-Xl-KHf" secondAttribute="bottom" constant="8" id="BVc-UX-svw"/>
+                <constraint firstItem="pUf-L0-4g0" firstAttribute="top" secondItem="34X-N3-AIl" secondAttribute="bottom" constant="82" id="Ggm-Ad-ntG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pUf-L0-4g0" secondAttribute="trailing" constant="350" id="IhI-Av-d3p"/>
+                <constraint firstItem="V0k-Xl-KHf" firstAttribute="top" secondItem="pUf-L0-4g0" secondAttribute="bottom" constant="8" id="KvR-s9-Y2T"/>
+                <constraint firstItem="tKV-xg-e2X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WVc-rk-h37"/>
+                <constraint firstItem="V0k-Xl-KHf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Y7t-7T-yzV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V0k-Xl-KHf" secondAttribute="trailing" constant="208" id="bp2-k2-dYj"/>
+                <constraint firstItem="pUf-L0-4g0" firstAttribute="top" secondItem="fvO-rY-Plx" secondAttribute="bottom" constant="82" id="eq1-TY-yJ7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tKV-xg-e2X" secondAttribute="trailing" constant="208" id="i63-Mp-8Iw"/>
+                <constraint firstItem="tKV-xg-e2X" firstAttribute="top" secondItem="wG2-I4-OmY" secondAttribute="bottom" constant="8" id="pGw-0V-JxP"/>
+                <constraint firstItem="pUf-L0-4g0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vLR-Qh-g0u"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fvO-rY-Plx" secondAttribute="trailing" constant="192" id="vOq-dr-hGj"/>
+                <constraint firstItem="wG2-I4-OmY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wlz-XN-Nqi"/>
+            </constraints>
+            <point key="canvasLocation" x="-128.98550724637681" y="55.580357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Button_Back" width="12" height="20"/>
+        <image name="Delete" width="338" height="43"/>
+        <image name="Update" width="338" height="43"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
