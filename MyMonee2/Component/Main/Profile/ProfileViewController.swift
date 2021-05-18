@@ -10,11 +10,7 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var imageProfile: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    @IBOutlet weak var displayedName: UILabel!
     @IBAction func btnEdit(_ sender: Any) {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
@@ -22,7 +18,29 @@ class ProfileViewController: UIViewController {
         vc.allowsEditing = true
         present(vc, animated: true)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        displayedName.text = userData[0].userName
+        if let savedData = UserDefaults.standard.value(forKey: "savedArray") as? Data {
+            let _userdata = try? PropertyListDecoder().decode(Array<Userdata>.self, from: savedData)
+            userData = _userdata ?? []
+        }
+    }
+    
+    @IBAction func editName(_ sender: Any) {
+        let editVC = EditProfileViewController(nibName: String(describing: EditProfileViewController.self), bundle: nil)
+        self.navigationController?.pushViewController(editVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        displayedName.text = userData[0].userName
+    }
+    
+
 }
+
+
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
  

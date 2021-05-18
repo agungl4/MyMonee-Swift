@@ -45,8 +45,8 @@ class CreateTrxViewController: UIViewController {
 //        trxVC.passIncome = userData[0].userIncome
 //        trxVC.passExpense = userData[0].userExpense
         
-//        transaksi.append(newTrx)
-        transaksi.insert(newTrx, at: 0)
+        transaksi.append(newTrx)
+//        transaksi.insert(newTrx, at: 0)
         self.navigationController?.popViewController(animated: true)
         print(transaksi)
         print(userData)

@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var greetingsLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var displayedName: UILabel!
     @IBOutlet weak var totalBalance: UILabel!
     @IBOutlet weak var totalIncome: UILabel!
     @IBOutlet weak var totalExpense: UILabel!
@@ -77,6 +78,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.register(uiNib, forCellReuseIdentifier: String(describing: HomeTableViewCell.self))
         greetingLogic()
         
+        if let savedData = UserDefaults.standard.value(forKey: "savedArray") as? Data {
+            let _userdata = try? PropertyListDecoder().decode(Array<Userdata>.self, from: savedData)
+            userData = _userdata ?? []
+        }
+        displayedName.text = userData[0].userName
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,6 +123,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         totalBalance.text = "\(userData[0].userBalance)"
         totalIncome.text = "\(userData[0].userIncome)"
         totalExpense.text = "\(userData[0].userExpense)"
+        displayedName.text = userData[0].userName
     }
 
 }

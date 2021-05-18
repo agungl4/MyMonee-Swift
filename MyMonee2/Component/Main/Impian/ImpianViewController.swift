@@ -32,10 +32,16 @@ class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return impian.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let priceFormatter = NumberFormatter()
+        priceFormatter.numberStyle = .currency
+        priceFormatter.locale = Locale(identifier: "id_ID")
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ImpianTableViewCell.self), for: indexPath) as! ImpianTableViewCell
+        let wish = impian[indexPath.row]
         cell.impianTitle.text = impian[indexPath.row].impianName
         cell.impianCurrent.text = impian[indexPath.row].impianCurrent
         cell.impianGoal.text = impian[indexPath.row].impianGoal
+//        cell.impianProgressBar.progress = impian[indexPath.row].impianCurrent / impian[indexPath.row].impianGoal
         return cell
     }
     

@@ -21,6 +21,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MyMonee2" customModuleProvider="target">
             <connections>
+                <outlet property="displayedName" destination="WtH-00-ZhK" id="4Xr-l3-7hd"/>
                 <outlet property="greetingsLabel" destination="auv-Xp-4KO" id="uYv-Fd-52v"/>
                 <outlet property="tableView" destination="ZxH-sn-X83" id="FSR-79-hXg"/>
                 <outlet property="totalBalance" destination="qRi-Nn-YXu" id="1Tj-Es-VlA"/>

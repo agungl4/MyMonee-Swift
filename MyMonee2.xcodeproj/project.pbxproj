@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5F07492653803400D326D6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5F07472653803400D326D6 /* EditProfileViewController.swift */; };
+		FA5F074A2653803400D326D6 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5F07482653803400D326D6 /* EditProfileViewController.xib */; };
 		FA75122E2653411900F5EA40 /* EditTrxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75122C2653411900F5EA40 /* EditTrxViewController.swift */; };
 		FA75122F2653411900F5EA40 /* EditTrxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA75122D2653411900F5EA40 /* EditTrxViewController.xib */; };
 		FA82A80E26527905001E7194 /* Userdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA82A80D26527905001E7194 /* Userdata.swift */; };
@@ -63,6 +65,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA5F07472653803400D326D6 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		FA5F07482653803400D326D6 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		FA75122C2653411900F5EA40 /* EditTrxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrxViewController.swift; sourceTree = "<group>"; };
 		FA75122D2653411900F5EA40 /* EditTrxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTrxViewController.xib; sourceTree = "<group>"; };
 		FA82A80D26527905001E7194 /* Userdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userdata.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 			children = (
 				FAE2AAAA264EF8C2005BE73F /* ProfileViewController.swift */,
 				FAE2AAAB264EF8C2005BE73F /* ProfileViewController.xib */,
+				FA5F07472653803400D326D6 /* EditProfileViewController.swift */,
+				FA5F07482653803400D326D6 /* EditProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 				FAE2AAAD264EF8C2005BE73F /* ProfileViewController.xib in Resources */,
 				FAF6112C26516AD900D6877B /* Poppins-Regular.ttf in Resources */,
 				FAAB187526503B0500B100D9 /* CreateImpianViewController.xib in Resources */,
+				FA5F074A2653803400D326D6 /* EditProfileViewController.xib in Resources */,
 				FAF6113026516AD900D6877B /* Poppins-LightItalic.ttf in Resources */,
 				FAF6112B26516AD900D6877B /* Poppins-BoldItalic.ttf in Resources */,
 				FAD078C2264D730E00877F90 /* Main.storyboard in Resources */,
@@ -397,6 +404,7 @@
 				FAE2AAAC264EF8C2005BE73F /* ProfileViewController.swift in Sources */,
 				FAF611112651676800D6877B /* DetailImpianViewController.swift in Sources */,
 				FAF611082651337200D6877B /* ImpianTableViewCell.swift in Sources */,
+				FA5F07492653803400D326D6 /* EditProfileViewController.swift in Sources */,
 				FAE2AA97264ED4B9005BE73F /* MainTabController.swift in Sources */,
 				FAF611412651BD0600D6877B /* DetailTrxViewController.swift in Sources */,
 				FAD078BF264D730E00877F90 /* ViewController.swift in Sources */,
