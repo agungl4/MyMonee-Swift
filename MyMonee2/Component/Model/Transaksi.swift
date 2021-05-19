@@ -10,16 +10,13 @@ import Foundation
 struct Transaksi {
     var id: Int?
     var trxName: String?
-    var trxPrice: String?
+    var trxPrice: Double?
     var status: Bool = false
     var trxDate: String
     
 }
 
-var transaksi: [Transaksi] = [
-//    Transaksi(id:0, trxName: "bayar listrik", trxPrice: "75.000", status: true),
-//    Transaksi(id:1, trxName: "gajian", trxPrice: "5.000.000", status: false)
-]
+var transaksi: [Transaksi] = [Transaksi]()
 
 func getCurrentDate() -> String {
     let date = Date()

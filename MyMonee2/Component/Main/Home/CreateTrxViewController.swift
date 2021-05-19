@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateTrxViewController: UIViewController {
+class CreateTrxViewController: UIViewController, UITextFieldDelegate {
     
         var newStatus: Bool = false
     
@@ -23,15 +23,12 @@ class CreateTrxViewController: UIViewController {
         newStatus = true
     }
     
-    @IBAction func saveBtn(_ sender: Any) {
+    @IBAction func saveBtn(_ sender: UIButton) {
         let date = Date()
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ind")
-        formatter.dateFormat = "dd MMMM yyyy - HH:mm"
-        let result = formatter.string(from: date)
         
         let trxVC = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
-        let newTrx = Transaksi(id: transaksi.count+1, trxName: trxTitle.text!, trxPrice: trxAmount.text!, status: newStatus, trxDate: result)
+    
+        let newTrx = Transaksi(id: transaksi.count+1, trxName: trxTitle.text!, trxPrice: Double(trxAmount.text!), status: newStatus, trxDate: date.dateTime())
         
         if newStatus == false {
             userData[0].userIncome += Double(trxAmount.text!)!
@@ -54,6 +51,13 @@ class CreateTrxViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        trxTitle.delegate = self
+//        trxAmount.delegate = self
+//
+//        if trxAmount.text!.isEmpty && ((trxTitle.text?.isEmpty) != nil) {
+//            saveBtn.userInteractionEnabled = false
+//        }
     }
-
 }
+
+

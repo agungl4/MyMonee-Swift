@@ -8,7 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
     
     @IBOutlet weak var greetingsLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -53,21 +52,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         greetingsLabel.text = greeting
     }
     
-//    func getTime(){
-//        let date = Date()
-//        let formatter = DateFormatter()
-//        formatter.timeZone = .current
-//        formatter.locale = .current
-//        formatter.dateFormat = "HH"
-//        let time = formatter.string(from: date)
-//    }
-    
-
-    
-//    var passBalance: Double = 0.0
-//    var passIncome: Double = 0.0
-//    var passExpense: Double = 0.0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,6 +67,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let _userdata = try? PropertyListDecoder().decode(Array<Userdata>.self, from: savedData)
             userData = _userdata ?? []
         }
+        let balanceFormatter = Formatter.currFormatter.string(from: userData[0].userBalance as NSNumber)
+        let incomeFormatter = Formatter.currFormatter.string(from: userData[0].userIncome as NSNumber)
+        let expenseFormatter = Formatter.currFormatter.string(from: userData[0].userExpense as NSNumber)
+        totalBalance.text = balanceFormatter
+        totalIncome.text = incomeFormatter
+        totalExpense.text = expenseFormatter
         displayedName.text = userData[0].userName
         
     }
@@ -101,9 +91,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeTableViewCell.self), for: indexPath) as! HomeTableViewCell
-//        let newCell = [Transaksi] = transaksi.sorted(by: { $0.id! > $1.id! })
+        
+        let priceFormatter = Formatter.currFormatter.string(from: transaksi[indexPath.row].trxPrice as! NSNumber)
+        
         cell.titleLabel.text = transaksi[indexPath.row].trxName
-        cell.priceLabel.text = "Rp \(transaksi[indexPath.row].trxPrice ?? "0")"
+        cell.priceLabel.text = priceFormatter
         cell.dateLabel.text = transaksi[indexPath.row].trxDate
         if transaksi[indexPath.row].status {
             cell.imageStatus.image = UIImage(systemName: "arrow.down")
@@ -122,17 +114,37 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let trx = transaksi[indexPath.row]
         detailTrx.passTrx = trx.trxName!
         detailTrx.passType = trx.status ?? true
-        detailTrx.passPrice = trx.trxPrice!
+        detailTrx.passPrice = String(trx.trxPrice!)
         detailTrx.passIndex = trx.id
         self.navigationController?.pushViewController(detailTrx, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        totalBalance.text = "Rp \(userData[0].userBalance)"
-        totalIncome.text = "Rp \(userData[0].userIncome)"
-        totalExpense.text = "Rp \(userData[0].userExpense)"
+        let balanceFormatter = Formatter.currFormatter.string(from: userData[0].userBalance as NSNumber)
+        let incomeFormatter = Formatter.currFormatter.string(from: userData[0].userIncome as NSNumber)
+        let expenseFormatter = Formatter.currFormatter.string(from: userData[0].userExpense as NSNumber)
+        totalBalance.text = balanceFormatter
+        totalIncome.text = incomeFormatter
+        totalExpense.text = expenseFormatter
         displayedName.text = userData[0].userName
     }
+}
 
+extension Date {
+    func dateTime(format: String = "yyyy-MM-dd HH:mm") -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.dateFormat = format
+        return formatter.string(from: self)
+    }
+}
+
+extension Formatter {
+    static var currFormatter:NumberFormatter {
+        let priceFormatter = NumberFormatter()
+        priceFormatter.numberStyle = .currency
+        priceFormatter.locale = Locale(identifier: "id_ID")
+        return priceFormatter
+    }
 }

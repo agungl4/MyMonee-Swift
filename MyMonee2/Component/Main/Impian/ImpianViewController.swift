@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol BtnDelegate: class {
+    func saveTrx(sender: UIButton!)
+}
+
 class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func btnCreateImpian(_ sender: Any) {
@@ -18,6 +22,8 @@ class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var impianTableView: UITableView!
     @IBOutlet weak var emptyDataLabel: UIImageView!
+//    var saveBtnTarget: BtnDelegate?
+//    btnCreateImp
     
     override func viewDidLoad() {
         super.viewDidLoad()

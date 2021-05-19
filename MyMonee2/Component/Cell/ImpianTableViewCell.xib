@@ -52,6 +52,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBv-PS-hpV">
+                                <rect key="frame" x="225" y="-3" width="32" height="32"/>
+                                <state key="normal" image="checkmark"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWj-v5-7y4">
+                                <rect key="frame" x="284" y="-3" width="32" height="32"/>
+                                <state key="normal" image="trashbin"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -63,10 +71,13 @@
                             <constraint firstItem="Vct-Qz-p5a" firstAttribute="top" secondItem="zPJ-gX-m6E" secondAttribute="bottom" constant="8" symbolic="YES" id="Cvq-m1-4HP"/>
                             <constraint firstItem="6d4-FS-gMQ" firstAttribute="leading" secondItem="y3y-Aa-XXa" secondAttribute="trailing" constant="8" symbolic="YES" id="E5G-JE-p3w"/>
                             <constraint firstAttribute="trailing" secondItem="zPJ-gX-m6E" secondAttribute="trailing" constant="262" id="Ej8-a6-54G"/>
+                            <constraint firstItem="yBv-PS-hpV" firstAttribute="leading" secondItem="zPJ-gX-m6E" secondAttribute="trailing" constant="163" id="HYf-Sb-tqi"/>
                             <constraint firstItem="B9r-dm-H93" firstAttribute="top" secondItem="Vct-Qz-p5a" secondAttribute="bottom" constant="8" symbolic="YES" id="Hm4-Ct-Hh1"/>
+                            <constraint firstAttribute="trailing" secondItem="PWj-v5-7y4" secondAttribute="trailing" constant="8" id="JKU-Wp-Qxi"/>
                             <constraint firstItem="6d4-FS-gMQ" firstAttribute="top" secondItem="Vct-Qz-p5a" secondAttribute="bottom" constant="8" id="MeP-fU-b7H"/>
                             <constraint firstItem="B9r-dm-H93" firstAttribute="leading" secondItem="6d4-FS-gMQ" secondAttribute="trailing" constant="8" symbolic="YES" id="Mmn-9J-mBo"/>
                             <constraint firstItem="6d4-FS-gMQ" firstAttribute="leading" secondItem="y3y-Aa-XXa" secondAttribute="trailing" constant="8" symbolic="YES" id="NzX-AB-ioN"/>
+                            <constraint firstItem="Vct-Qz-p5a" firstAttribute="top" secondItem="PWj-v5-7y4" secondAttribute="bottom" constant="7" id="PE3-G5-Fih"/>
                             <constraint firstItem="Vct-Qz-p5a" firstAttribute="leading" secondItem="LEx-Dv-J2z" secondAttribute="leading" constant="16" id="SXR-eJ-Ksy"/>
                             <constraint firstItem="B9r-dm-H93" firstAttribute="leading" secondItem="6d4-FS-gMQ" secondAttribute="trailing" constant="8" symbolic="YES" id="Xcv-hQ-YEm"/>
                             <constraint firstAttribute="bottom" secondItem="B9r-dm-H93" secondAttribute="bottom" constant="8" id="YDM-ZQ-Pep"/>
@@ -74,7 +85,9 @@
                             <constraint firstAttribute="bottom" secondItem="y3y-Aa-XXa" secondAttribute="bottom" constant="8" id="eS8-jh-Aq4"/>
                             <constraint firstItem="zPJ-gX-m6E" firstAttribute="top" secondItem="LEx-Dv-J2z" secondAttribute="top" constant="6" id="esT-A8-iLy"/>
                             <constraint firstAttribute="bottom" secondItem="6d4-FS-gMQ" secondAttribute="bottom" constant="8" id="fY6-IE-J0x"/>
+                            <constraint firstItem="Vct-Qz-p5a" firstAttribute="top" secondItem="yBv-PS-hpV" secondAttribute="bottom" constant="7" id="iYE-Oh-7U6"/>
                             <constraint firstItem="B9r-dm-H93" firstAttribute="top" secondItem="Vct-Qz-p5a" secondAttribute="bottom" constant="8" id="l2o-h0-N5L"/>
+                            <constraint firstItem="PWj-v5-7y4" firstAttribute="leading" secondItem="yBv-PS-hpV" secondAttribute="trailing" constant="27" id="w8i-Lf-6bq"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -97,6 +110,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="checkmark" width="32" height="32"/>
+        <image name="trashbin" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

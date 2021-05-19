@@ -62,11 +62,6 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaJ-T4-eZC">
-                            <rect key="frame" x="56.5" y="489" width="338" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Confirm_Btn"/>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nama trx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbG-lu-T87">
                             <rect key="frame" x="93" y="61" width="229" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -128,7 +123,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Confirm_Btn" width="338" height="43"/>
         <image name="Frame 7" width="36" height="36"/>
         <image name="Return_Btn" width="338" height="43"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>

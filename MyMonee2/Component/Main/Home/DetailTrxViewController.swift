@@ -38,6 +38,7 @@ class DetailTrxViewController: UIViewController {
             trxIcon.image = UIImage(systemName: "arrow.up")
             trxIcon.tintColor = UIColor.green
         }
+        
         trxAmount.text = passPrice
     }
 
