@@ -9,12 +9,19 @@ import UIKit
 
 class ImpianTableViewCell: UITableViewCell {
 
+    var delegate: BtnDelegate?
+    var wishId: Int = 0
+    
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var impianTitle: UILabel!
     @IBOutlet weak var impianProgressBar: UIProgressView!
     @IBOutlet weak var impianCurrent: UILabel!
     @IBOutlet weak var impianGoal: UILabel!
     
+    @IBAction func btnDelete(_ sender: Any) {
+        delegate?.deleteRecord(with: wishId)
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         mainView.layer.cornerRadius = 10

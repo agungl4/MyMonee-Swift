@@ -7,11 +7,12 @@
 
 import UIKit
 
-protocol BtnDelegate: class {
-    func saveTrx(sender: UIButton!)
+protocol BtnDelegate: AnyObject {
+    func deleteRecord(with wishId:Int)
+    
 }
 
-class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ImpianViewController: UIViewController{
     
     @IBAction func btnCreateImpian(_ sender: Any) {
         let createImpianViewController = CreateImpianViewController(nibName: String(describing: CreateImpianViewController.self), bundle: nil)
@@ -22,8 +23,6 @@ class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var impianTableView: UITableView!
     @IBOutlet weak var emptyDataLabel: UIImageView!
-//    var saveBtnTarget: BtnDelegate?
-//    btnCreateImp
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +33,28 @@ class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let uiNib = UINib(nibName: String(describing: ImpianTableViewCell.self), bundle: nil)
         impianTableView.register(uiNib, forCellReuseIdentifier: String(describing: ImpianTableViewCell.self))
     }
-    
+   
+    override func viewWillAppear(_ animated: Bool) {
+        impianTableView.reloadData()
+    }
+
+}
+
+
+extension ImpianViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailImpian = DetailImpianViewController(nibName: String(describing: DetailImpianViewController.self), bundle: nil)
+        self.navigationController?.pushViewController(detailImpian, animated: true)
+        let wish = impian[indexPath.row]
+        detailImpian.passTitle = wish.impianName!
+        detailImpian.passCurrent = wish.impianCurrent!
+        detailImpian.passGoal = wish.impianGoal!
+        detailImpian.passIndex = wish.id
+        print(wish.id)
+    }
+}
+
+extension ImpianViewController: UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if impian.count == 0 {
             impianTableView.isHidden = true
@@ -59,23 +79,17 @@ class ImpianViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.impianTitle.text = impian[indexPath.row].impianName
         cell.impianCurrent.text = "IDR \(impian[indexPath.row].impianCurrent ?? "0")"
         cell.impianGoal.text = "IDR \(impian[indexPath.row].impianGoal ?? "0")"
-//        cell.impianProgressBar.progress = impian[indexPath.row].impianCurrent / impian[indexPath.row].impianGoal
+        cell.wishId = indexPath.row
+        cell.delegate = self
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailImpian = DetailImpianViewController(nibName: String(describing: DetailImpianViewController.self), bundle: nil)
-        self.navigationController?.pushViewController(detailImpian, animated: true)
-        let wish = impian[indexPath.row]
-        detailImpian.passTitle = wish.impianName!
-        detailImpian.passCurrent = wish.impianCurrent!
-        detailImpian.passGoal = wish.impianGoal!
-        detailImpian.passIndex = wish.id
-        print(wish.id)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        impianTableView.reloadData()
-    }
+}
 
+extension ImpianViewController:BtnDelegate {
+    func deleteRecord(with wishId: Int) {
+        let dreamVC = ImpianViewController(nibName: String(describing: ImpianViewController.self), bundle: nil)
+        impian.remove(at: wishId)
+        print("fungsi works")
+        self.impianTableView.reloadData()
+    }
 }

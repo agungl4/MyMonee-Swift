@@ -37,10 +37,6 @@ class CreateTrxViewController: UIViewController, UITextFieldDelegate {
             userData[0].userExpense += Double(trxAmount.text!)!
             userData[0].userBalance -= Double(trxAmount.text!)!
         }
-
-//        trxVC.passBalance = userData[0].userBalance
-//        trxVC.passIncome = userData[0].userIncome
-//        trxVC.passExpense = userData[0].userExpense
         
         transaksi.append(newTrx)
 //        transaksi.insert(newTrx, at: 0)
