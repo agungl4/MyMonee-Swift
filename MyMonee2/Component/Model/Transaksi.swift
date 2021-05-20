@@ -7,22 +7,24 @@
 
 import Foundation
 
+struct TransaksiResponse: Codable {
+    var results: [Transaksi]?
+}
+
 struct Transaksi: Codable {
-    var id: Int?
+    var id: String?
     var trxName: String?
-    var trxPrice: Double?
+    var trxPrice: Int?
     var status: Bool = false
-    var trxDate: String
+    var trxDate: String?
     
     enum CodingKeys: String, CodingKey {
         case id
-        case trxName = "trx_name"
+        case trxName
         case trxPrice
         case status
-        case trxDate = "trx_date"
+        case trxDate
     }
     
 }
-
-var transaksi: [Transaksi] = [Transaksi]()
 

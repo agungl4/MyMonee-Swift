@@ -10,7 +10,14 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var greetingsLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+            
+            tableView.register(UINib(nibName: String(describing: HomeTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HomeTableViewCell.self))
+        }
+    }
     
     @IBOutlet weak var emptyDataLabel: UIImageView!
     @IBOutlet weak var displayedName: UILabel!
@@ -24,6 +31,13 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(createTrxViewController, animated: true)
     }
     
+    var trxList: [Transaksi] = []{
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    var service: NetworkService = NetworkService()
     var greeting = ""
     
     func greetingLogic() {
@@ -51,25 +65,37 @@ class HomeViewController: UIViewController {
         greetingsLabel.text = greeting
     }
     
+    func loadData() {
+        service.loadTrxList{ response in
+            DispatchQueue.main.async {
+                
+                self.trxList = response
+            }
+            
+        }
+    }
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.delegate = self
-        tableView.dataSource = self
-        // Do any additional setup after loading the view.
-
-        let uiNib = UINib(nibName: String(describing: HomeTableViewCell.self), bundle: nil)
-        tableView.register(uiNib, forCellReuseIdentifier: String(describing: HomeTableViewCell.self))
-        greetingLogic()
+        
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//        let uiNib = UINib(nibName: String(describing: HomeTableViewCell.self), bundle: nil)
+//        tableView.register(uiNib, forCellReuseIdentifier: String(describing: HomeTableViewCell.self))
+//        greetingLogic()
         
         if let savedData = UserDefaults.standard.value(forKey: "savedArray") as? Data {
             let _userdata = try? PropertyListDecoder().decode(Array<Userdata>.self, from: savedData)
             userData = _userdata ?? []
         }
-        let balanceFormatter = Formatter.currFormatter.string(from: userData[0].userBalance as NSNumber)
+        self.loadData()
+        
         let incomeFormatter = Formatter.currFormatter.string(from: userData[0].userIncome as NSNumber)
         let expenseFormatter = Formatter.currFormatter.string(from: userData[0].userExpense as NSNumber)
-        totalBalance.text = balanceFormatter
+        totalBalance.text = String(countBalance(status: false) - countBalance(status: true))
+       
         totalIncome.text = incomeFormatter
         totalExpense.text = expenseFormatter
         displayedName.text = userData[0].userName
@@ -78,13 +104,29 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        let balanceFormatter = Formatter.currFormatter.string(from: userData[0].userBalance as NSNumber)
-        let incomeFormatter = Formatter.currFormatter.string(from: userData[0].userIncome as NSNumber)
-        let expenseFormatter = Formatter.currFormatter.string(from: userData[0].userExpense as NSNumber)
+        let balanceFormatter = Formatter.currFormatter.string(from: countBalance(status: false) - countBalance(status: true) as NSNumber)
+        self.loadData()
         totalBalance.text = balanceFormatter
-        totalIncome.text = incomeFormatter
-        totalExpense.text = expenseFormatter
+        totalIncome.text = Formatter.currFormatter.string(from: countBalance(status: false) as NSNumber)
+        totalExpense.text = Formatter.currFormatter.string(from: countBalance(status: true) as NSNumber)
+//        let incomeFormatter = Formatter.currFormatter.string(from: userData[0].userIncome as NSNumber)
+//        let expenseFormatter = Formatter.currFormatter.string(from: userData[0].userExpense as NSNumber)
+//        totalBalance.text = balanceFormatter
+//        totalIncome.text = incomeFormatter
+//        totalExpense.text = expenseFormatter
         displayedName.text = userData[0].userName
+    }
+    func countBalance(status: Bool) -> Int {
+        var totalBalance : Int = 0
+        
+        for item in trxList {
+            if(item.status == status) {
+                totalBalance += item.trxPrice!
+            }
+            
+        }
+        
+        return totalBalance
     }
 }
 
@@ -109,37 +151,37 @@ extension Formatter {
 extension HomeViewController: UITableViewDelegate  {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailTrx = DetailTrxViewController(nibName: String(describing: DetailTrxViewController.self), bundle: nil)
-        let trx = transaksi[indexPath.row]
+        let trx = trxList[indexPath.row]
         detailTrx.passTrx = trx.trxName!
-        detailTrx.passType = trx.status ?? true
+        detailTrx.passType = trx.status
         detailTrx.passPrice = String(trx.trxPrice!)
-        detailTrx.passIndex = trx.id
+//        detailTrx.passIndex = Int(trx.id!)
         self.navigationController?.pushViewController(detailTrx, animated: true)
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if transaksi.count == 0 {
+        if trxList.count == 0 {
             tableView.isHidden = true
             emptyDataLabel.isHidden = false
         } else {
             tableView.isHidden = false
             emptyDataLabel.isHidden = true
         }
-        return transaksi.count
+        print(trxList)
+        return trxList.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeTableViewCell.self), for: indexPath) as! HomeTableViewCell
-        
-        let priceFormatter = Formatter.currFormatter.string(from: transaksi[indexPath.row].trxPrice! as NSNumber)
-        
-        cell.titleLabel.text = transaksi[indexPath.row].trxName
+//        cell.showData(transaksi: trxList[indexPath.row])
+        let priceFormatter = Formatter.currFormatter.string(from: trxList[indexPath.row].trxPrice! as NSNumber)
+        cell.titleLabel.text = trxList[indexPath.row].trxName
         cell.priceLabel.text = priceFormatter
-        cell.dateLabel.text = transaksi[indexPath.row].trxDate
-        if transaksi[indexPath.row].status {
+        cell.dateLabel.text = trxList[indexPath.row].trxDate
+        if trxList[indexPath.row].status == true {
             cell.imageStatus.image = UIImage(systemName: "arrow.down")
             cell.imageStatus.tintColor = UIColor.red
         } else {

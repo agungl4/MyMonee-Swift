@@ -26,4 +26,11 @@ class HomeTableViewCell: UITableViewCell {
 
     }
     
+    func showData(transaksi: Transaksi) {
+        titleLabel.text = transaksi.trxName
+        priceLabel.text = String(transaksi.trxPrice!)
+        let priceFormatter = Formatter.currFormatter.string(from: transaksi.trxPrice! as NSNumber)
+        dateLabel.text = transaksi.trxDate
+    }
+        
 }
