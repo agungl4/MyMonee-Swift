@@ -9,7 +9,7 @@ import UIKit
 
 protocol BtnDelegate: AnyObject {
     func deleteRecord(with wishId:Int)
-    
+    func completeRecord(with wishId:Int)
 }
 
 class ImpianViewController: UIViewController{
@@ -86,6 +86,16 @@ extension ImpianViewController: UITableViewDataSource  {
 }
 
 extension ImpianViewController:BtnDelegate {
+    func completeRecord(with wishId: Int) {
+        let alert = UIAlertController(title: "Confirmation", message: "Are you sure to delete this wish?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in impian.remove(at: wishId); self.impianTableView.reloadData()}))
+        alert.addAction(UIAlertAction(title: "Cancel",
+                                      style: .cancel))
+        print("fungsi works")
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     func deleteRecord(with wishId: Int) {
         let dreamVC = ImpianViewController(nibName: String(describing: ImpianViewController.self), bundle: nil)
         impian.remove(at: wishId)

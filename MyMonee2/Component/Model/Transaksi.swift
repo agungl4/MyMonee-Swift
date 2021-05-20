@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct Transaksi {
+struct Transaksi: Codable {
     var id: Int?
     var trxName: String?
     var trxPrice: Double?
     var status: Bool = false
     var trxDate: String
     
+    enum CodingKeys: String, CodingKey {
+        case id
+        case trxName = "trx_name"
+        case trxPrice
+        case status
+        case trxDate = "trx_date"
+    }
+    
 }
 
 var transaksi: [Transaksi] = [Transaksi]()
 
-func getCurrentDate() -> String {
-    let date = Date()
-    let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "ind")
-    formatter.dateFormat = "dd MMMM yyyy - HH.mm"
-    let result = formatter.string(from: date)
-    return result
-}

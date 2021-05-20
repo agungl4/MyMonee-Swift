@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA08B2B026561F8F009389C2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08B2AF26561F8F009389C2 /* NetworkService.swift */; };
 		FA5F07492653803400D326D6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5F07472653803400D326D6 /* EditProfileViewController.swift */; };
 		FA5F074A2653803400D326D6 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5F07482653803400D326D6 /* EditProfileViewController.xib */; };
 		FA75122E2653411900F5EA40 /* EditTrxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75122C2653411900F5EA40 /* EditTrxViewController.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA08B2AF26561F8F009389C2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FA5F07472653803400D326D6 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		FA5F07482653803400D326D6 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		FA75122C2653411900F5EA40 /* EditTrxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrxViewController.swift; sourceTree = "<group>"; };
@@ -135,15 +137,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA08B2AE26561F7B009389C2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA08B2AF26561F8F009389C2 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		FAA4BCD226521F21007F5F7C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FAD078E0264D765400877F90 /* HomeViewController.swift */,
+				FAD078E1264D765400877F90 /* HomeViewController.xib */,
 				FAAB186D26502BB700B100D9 /* CreateTrxViewController.swift */,
 				FAAB186E26502BB700B100D9 /* CreateTrxViewController.xib */,
 				FAF6113F2651BD0600D6877B /* DetailTrxViewController.swift */,
 				FAF611402651BD0600D6877B /* DetailTrxViewController.xib */,
-				FAD078E0264D765400877F90 /* HomeViewController.swift */,
-				FAD078E1264D765400877F90 /* HomeViewController.xib */,
 				FA75122C2653411900F5EA40 /* EditTrxViewController.swift */,
 				FA75122D2653411900F5EA40 /* EditTrxViewController.xib */,
 			);
@@ -212,6 +222,7 @@
 		FAD078DE264D75DB00877F90 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				FA08B2AE26561F7B009389C2 /* Network */,
 				FAE2AA94264ED477005BE73F /* TabNavigator */,
 				FAD078F3264D8D1400877F90 /* Model */,
 				FAD078F1264D8C8E00877F90 /* Main */,
@@ -409,6 +420,7 @@
 				FAF611412651BD0600D6877B /* DetailTrxViewController.swift in Sources */,
 				FAD078BF264D730E00877F90 /* ViewController.swift in Sources */,
 				FAE2AAA7264EF610005BE73F /* ImpianViewController.swift in Sources */,
+				FA08B2B026561F8F009389C2 /* NetworkService.swift in Sources */,
 				FAF6110C265137CB00D6877B /* Impian.swift in Sources */,
 				FAD078C5264D730E00877F90 /* MyMonee2.xcdatamodeld in Sources */,
 				FAD078BB264D730E00877F90 /* AppDelegate.swift in Sources */,

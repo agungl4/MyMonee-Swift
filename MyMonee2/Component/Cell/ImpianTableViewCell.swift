@@ -22,6 +22,9 @@ class ImpianTableViewCell: UITableViewCell {
         delegate?.deleteRecord(with: wishId)
     }
 
+    @IBAction func btnComplete(_ sender: Any) {
+        delegate?.completeRecord(with: wishId)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         mainView.layer.cornerRadius = 10
