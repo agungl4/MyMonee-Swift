@@ -28,3 +28,4 @@ struct Transaksi: Codable {
     
 }
 
+//var transaksi: [Transaksi]

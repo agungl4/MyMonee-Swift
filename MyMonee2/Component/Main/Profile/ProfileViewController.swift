@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProfileViewController: UIViewController {
 
@@ -26,6 +27,9 @@ class ProfileViewController: UIViewController {
             let _userdata = try? PropertyListDecoder().decode(Array<Userdata>.self, from: savedData)
             userData = _userdata ?? []
         }
+        
+        let urlStr = URL(string: "https://images.unsplash.com/photo-1621300810337-8a6ea0261add?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+        imageProfile.kf.setImage(with: urlStr)
     }
     
     @IBAction func editName(_ sender: Any) {

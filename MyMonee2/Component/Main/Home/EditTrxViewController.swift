@@ -9,48 +9,27 @@ import UIKit
 
 class EditTrxViewController: UIViewController {
 
+    var service: NetworkService = NetworkService()
     @IBOutlet weak var judulTrx: UITextField!
     @IBOutlet weak var jumlahTrx: UITextField!
     
     
     @IBAction func editBtn(_ sender: UIButton) {
-//        let date = Date()
-//        let formatter = DateFormatter()
-//        formatter.locale = Locale(identifier: "ind")
-//        formatter.dateFormat = "dd MMMM yyyy - HH:mm"
-//        let result = formatter.string(from: date)
-//
-//        let trxVC = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
-//        transaksi[getIndex!-1] = Transaksi(id: transaksi[getIndex!-1].id, trxName : judulTrx.text!, trxPrice: Double(jumlahTrx.text!), trxDate: result)
-//
-//        if transaksi[getIndex!-1].status == false {
-//            userData[0].userIncome += Double(jumlahTrx.text!)!
-//            userData[0].userBalance += Double(jumlahTrx.text!)!
-//        } else {
-//            userData[0].userExpense += Double(jumlahTrx.text!)!
-//            userData[0].userBalance -= Double(jumlahTrx.text!)!
-//        }
-//        self.navigationController?.pushViewController(trxVC, animated: true)
+        let date = Date()
+        print("ID trx ",getIndex)
+        let trxVC = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
+        let data = Transaksi(id: String(getIndex!), trxName : judulTrx.text!, trxPrice: Int(jumlahTrx.text!), trxDate: date.dateTime())
+        service.updateTransaction(data: data)
+        self.navigationController?.pushViewController(trxVC, animated: true)
     }
     
     @IBAction func deleteBtn(_ sender: UIButton) {
-//        let trxVC = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
-//        print(getIndex)
-//
-//        if transaksi[getIndex!-1].status == false {
-//            userData[0].userIncome -= Double(jumlahTrx.text!)!
-//            userData[0].userBalance -= Double(jumlahTrx.text!)!
-//        } else {
-//            userData[0].userExpense -= Double(jumlahTrx.text!)!
-//            userData[0].userBalance -= Double(jumlahTrx.text!)!
-//        }
-//
-//        transaksi.remove(at: getIndex!-1)
-//        print(userData)
-//        self.navigationController?.pushViewController(trxVC, animated: true)
+        let trxVC = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
+        service.deleteTransaction(id: getIndex!)
+        self.navigationController?.pushViewController(trxVC, animated: true)
     }
     
-    var getIndex: Int?
+    var getIndex: String?
     var getTitle: String = ""
     var getAmount: String = ""
     override func viewDidLoad() {
@@ -61,13 +40,3 @@ class EditTrxViewController: UIViewController {
 
 }
 
-extension EditTrxViewController {
-    func getDate() -> String {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ind")
-        formatter.dateFormat = "dd MMMM yyyy - HH:mm"
-        let result = formatter.string(from: date)
-        return result
-    }
-}

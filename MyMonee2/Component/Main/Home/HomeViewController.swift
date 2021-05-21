@@ -70,6 +70,7 @@ class HomeViewController: UIViewController {
             DispatchQueue.main.async {
                 
                 self.trxList = response
+//                self.countBalance(status: true)
             }
             
         }
@@ -104,24 +105,20 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        let balanceFormatter = Formatter.currFormatter.string(from: countBalance(status: false) - countBalance(status: true) as NSNumber)
         self.loadData()
-        totalBalance.text = balanceFormatter
+        totalBalance.text = Formatter.currFormatter.string(from: countBalance(status: false) - countBalance(status: true) as NSNumber)
         totalIncome.text = Formatter.currFormatter.string(from: countBalance(status: false) as NSNumber)
         totalExpense.text = Formatter.currFormatter.string(from: countBalance(status: true) as NSNumber)
-//        let incomeFormatter = Formatter.currFormatter.string(from: userData[0].userIncome as NSNumber)
-//        let expenseFormatter = Formatter.currFormatter.string(from: userData[0].userExpense as NSNumber)
-//        totalBalance.text = balanceFormatter
-//        totalIncome.text = incomeFormatter
-//        totalExpense.text = expenseFormatter
+
         displayedName.text = userData[0].userName
     }
+    
     func countBalance(status: Bool) -> Int {
         var totalBalance : Int = 0
         
         for item in trxList {
             if(item.status == status) {
-                totalBalance += item.trxPrice!
+                totalBalance += Int(item.trxPrice!)
             }
             
         }
@@ -155,7 +152,7 @@ extension HomeViewController: UITableViewDelegate  {
         detailTrx.passTrx = trx.trxName!
         detailTrx.passType = trx.status
         detailTrx.passPrice = String(trx.trxPrice!)
-//        detailTrx.passIndex = Int(trx.id!)
+        detailTrx.IDtrx = trx.id!
         self.navigationController?.pushViewController(detailTrx, animated: true)
     }
 }
@@ -169,7 +166,7 @@ extension HomeViewController: UITableViewDataSource {
             tableView.isHidden = false
             emptyDataLabel.isHidden = true
         }
-        print(trxList)
+//        print(trxList)
         return trxList.count
         
     }

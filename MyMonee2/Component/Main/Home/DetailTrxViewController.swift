@@ -9,11 +9,12 @@ import UIKit
 
 class DetailTrxViewController: UIViewController {
 
+    @IBOutlet weak var trxID: UILabel!
     @IBOutlet weak var trxName: UILabel!
     @IBOutlet weak var trxType: UILabel!
     @IBAction func btnEdit(_ sender: Any) {
         let editVC = EditTrxViewController(nibName: String(describing: EditTrxViewController.self), bundle: nil)
-        editVC.getIndex = passIndex
+        editVC.getIndex = IDtrx
         editVC.getTitle = passTrx
         editVC.getAmount = passPrice
         self.navigationController?.pushViewController(editVC, animated: true)
@@ -21,6 +22,7 @@ class DetailTrxViewController: UIViewController {
     @IBOutlet weak var trxAmount: UILabel!
     @IBOutlet weak var trxIcon: UIImageView!
     
+    var IDtrx: String = ""
     var passIndex: Int? = 0
     var passTrx: String = ""
     var passType: Bool = false
@@ -29,6 +31,7 @@ class DetailTrxViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         trxName.text = passTrx
+        trxID.text = IDtrx
         if passType == true {
             trxType.text = "pengeluaran"
             trxIcon.image = UIImage(systemName: "arrow.down")
@@ -40,6 +43,7 @@ class DetailTrxViewController: UIViewController {
         }
         
         trxAmount.text = passPrice
+//        print("ID trx ",IDtrx)
     }
 
 

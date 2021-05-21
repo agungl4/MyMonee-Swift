@@ -19,6 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailTrxViewController" customModule="MyMonee2" customModuleProvider="target">
             <connections>
                 <outlet property="trxAmount" destination="bEP-L0-UDt" id="K0h-eg-K89"/>
+                <outlet property="trxID" destination="Pxs-1W-HCS" id="pDj-n9-fGx"/>
                 <outlet property="trxIcon" destination="dGm-VT-psC" id="ZW6-AO-qxi"/>
                 <outlet property="trxName" destination="XbG-lu-T87" id="6c0-k9-aqu"/>
                 <outlet property="trxType" destination="t49-I2-aiy" id="zj0-92-3hz"/>
